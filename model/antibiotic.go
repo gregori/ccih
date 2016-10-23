@@ -4,13 +4,12 @@ import (
 	"errors"
 	"log"
 
-	"github.com/go-xorm/xorm"
-	_ "github.com/mattn/go-sqlite3"
+	"github.com/jinzhu/gorm"
 )
 
 type Antibiotic struct {
-	Id        int64
-	Name      string `xorm:"unique"`
-	ShortName string `xorm:"unique"`
+	ID        int
+	Name      string `gorm:"not null;unique"`
+	ShortName string `gorm:"not null;unique"`
 	Gram      string
 }
