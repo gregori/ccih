@@ -1,0 +1,5 @@
+development:
+    driver: sqlite3
+    open: db/profile.db
+    dialect: sqlite3
+    import: github.com/mattn/go-sqlite3

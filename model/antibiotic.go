@@ -11,5 +11,7 @@ type Antibiotic struct {
 	ID        int
 	Name      string `gorm:"not null;unique"`
 	ShortName string `gorm:"not null;unique"`
-	Gram      string
+	Gram      bool
+	UpdatedAt time.Time
+	CreatedAt time.Time
 }
